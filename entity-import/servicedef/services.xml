@@ -5,13 +5,10 @@
     <vendor></vendor>
     <version>1.0</version>
 
-<service name="importAddressMatchMapCsv" engine="java" auth="true"
-		location="org.ofbiz.party.party.PartyServices" invoke="entityImport">
+<service name="entityImport" engine="java" auth="true" 
+		location="org.ofbiz.entity.service.EntityImportService" invoke="entityImport">
 		<description>Import a CSV (name,value) of AddressMatchMap records</description>
-		<permission-service service-name="partyBasePermissionCheck" main-action="CREATE"/>
-		<attribute name="uploadedFile" type="java.nio.ByteBuffer" mode="IN" optional="false"/>
-		<attribute name="_uploadedFile_fileName" type="String" mode="IN" optional="false"/>
-		<attribute name="_uploadedFile_contentType" type="String" mode="IN" optional="false"/>
+		<implements service="uploadFileInterface"/>
 		
 		<attribute name="mostlyInserts" type="String" mode="IN" optional="true"/>
         <attribute name="maintainTimeStamps" type="String" mode="IN" optional="true"/>

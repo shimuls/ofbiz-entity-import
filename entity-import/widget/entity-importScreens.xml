@@ -10,6 +10,7 @@
             <widgets>
                 <decorator-screen name="entity-importCommonDecorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
+                    	<include-form location="component://entity-import/widget/entity-importForms.xml" name="uploadForm"/>
                     </decorator-section>
                 </decorator-screen>
             </widgets>
