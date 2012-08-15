@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SecurityPermission description="View operations in the entity-import Component." permissionId="ENTITY-IMPORT_VIEW"/>
+    <SecurityPermission description="Create operations in the entity-import Component." permissionId="ENTITY-IMPORT_CREATE"/>
+    <SecurityPermission description="Update operations in the entity-import Component." permissionId="ENTITY-IMPORT_UPDATE"/>
+    <SecurityPermission description="Delete operations in the entity-import Component." permissionId="ENTITY-IMPORT_DELETE"/>
+    <SecurityPermission description="ALL operations in the entity-import Component." permissionId="ENTITY-IMPORT_ADMIN"/>
+    <SecurityGroupPermission groupId="FULLADMIN" permissionId="ENTITY-IMPORT_ADMIN"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ENTITY-IMPORT_CREATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ENTITY-IMPORT_DELETE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ENTITY-IMPORT_UPDATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ENTITY-IMPORT_VIEW"/>
+    <SecurityGroupPermission groupId="VIEWADMIN" permissionId="ENTITY-IMPORT_VIEW"/>
+    <SecurityGroupPermission groupId="BIZADMIN" permissionId="ENTITY-IMPORT_ADMIN"/>
+</entity-engine-xml>
