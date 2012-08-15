@@ -32,7 +32,7 @@ public class EntityFileReaderFactory {
 	
 	private volatile XlsEntityFileReader xlsReader = new XlsEntityFileReader();
 	
-	private static final String TYPE_XLS = "CSV";
+	private static final String TYPE_XLS = "XLS";
 	
 	public static EntityFileReaderFactory getInstance() {
 		return INSTANCE;
