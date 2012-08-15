@@ -16,4 +16,9 @@
         <value xml:lang="en">You are not allowed to view this page.</value>
         <value xml:lang="zh">不允许你浏览这个页面。</value>
     </property>
+    <property key="entity-importApplication">
+        <value xml:lang="en">Entity Importation</value>
+        <value xml:lang="zh">实体导入</value>
+    </property>
+    
 </resource>
