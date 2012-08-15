@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>entity-import Services</description>
+    <vendor></vendor>
+    <version>1.0</version>
+
+<service name="importAddressMatchMapCsv" engine="java" auth="true"
+		location="org.ofbiz.party.party.PartyServices" invoke="entityImport">
+		<description>Import a CSV (name,value) of AddressMatchMap records</description>
+		<permission-service service-name="partyBasePermissionCheck" main-action="CREATE"/>
+		<attribute name="uploadedFile" type="java.nio.ByteBuffer" mode="IN" optional="false"/>
+		<attribute name="_uploadedFile_fileName" type="String" mode="IN" optional="false"/>
+		<attribute name="_uploadedFile_contentType" type="String" mode="IN" optional="false"/>
+		
+		<attribute name="mostlyInserts" type="String" mode="IN" optional="true"/>
+        <attribute name="maintainTimeStamps" type="String" mode="IN" optional="true"/>
+        <attribute name="txTimeout" type="Integer" mode="IN" optional="true"/>
+        <attribute name="createDummyFks" type="String" mode="IN" optional="true"/>
+        <attribute name="checkDataOnly" type="String" mode="IN" optional="true"/>
+        
+		<attribute name="rowProcessed" type="Long" mode="OUT" optional="false"/>
+	</service>
+    
+    
+</services>
