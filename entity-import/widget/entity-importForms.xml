@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
-	<form name="uploadForm" target="import" title="" type="single" default-map-name="parameters">
+	<form name="uploadForm" id="uploadForm" target="import" title="" type="single" default-map-name="parameters" >
         <field name="quoteId" title="${uiLabelMap.OrderOrderQuoteId}" widget-style="buttontext">
             <hyperlink also-hidden="false" description="${quoteId}" target="ViewQuote">
                 <parameter param-name="quoteId"/>
@@ -10,7 +10,7 @@
 		<field name="uploadedFile" title="Submit file(.xls, .csv, .xml)">
 			<file></file>
 		</field>
-		<field title="上传文件">
+		<field title="上传文件" action="javascript:document.uploadForm.enctype='multipart/form-data';" event="onclick">
 			<submit/>
 		</field>
 	</form>

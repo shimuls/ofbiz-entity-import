@@ -36,7 +36,7 @@ public class EntityImportServices {
 		GenericValue userLogin = (GenericValue) context.get("userLogin");
 		ByteBuffer byteBuffer = (ByteBuffer) context.get("uploadedFile");
 		String fileName = (String) context.get("_uploadedFile_fileName");
-		String type = fileName.substring(fileName.lastIndexOf("."));
+		String type = fileName.substring(fileName.lastIndexOf(".") + 1);
 		EntityFileReader reader = EntityFileReaderFactory.getInstance().getReader(type);
 		
 		if(reader == null) {

@@ -6,7 +6,7 @@
     <version>1.0</version>
 
 <service name="entityImport" engine="java" auth="true" 
-		location="org.ofbiz.entity.service.EntityImportService" invoke="entityImport">
+		location="org.ofbiz.entity.service.EntityImportServices" invoke="entityImport">
 		<description>Import a CSV (name,value) of AddressMatchMap records</description>
 		<implements service="uploadFileInterface"/>
 		
