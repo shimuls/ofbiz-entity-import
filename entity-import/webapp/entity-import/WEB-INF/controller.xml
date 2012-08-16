@@ -28,7 +28,7 @@
 	
 	<request-map uri="import">
 		<security https="true" auth="true"/>
-		<event type="service" invoke="entityImport"/>
+		<event type="service" invoke="entity-import-entityImport"/>
 		<response name="success" type="view" value="main"/>
 	</request-map>
     
