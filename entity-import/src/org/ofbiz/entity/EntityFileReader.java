@@ -38,7 +38,7 @@ public interface EntityFileReader {
 	 * @throws IOException 
 	 * @throws BiffException 
 	 */
-	public String getEntitiesInXml(File file) throws BiffException, IOException;
+	public String getEntitiesInXml(File file) throws Exception;
 	
 	/**
 	 * Read entities in the file 
@@ -47,7 +47,7 @@ public interface EntityFileReader {
 	 * @throws IOException 
 	 * @throws BiffException 
 	 */
-	public String getEntitiesInXml(InputStream is) throws BiffException, IOException;
+	public String getEntitiesInXml(InputStream is) throws Exception;
 	
 	/**
 	 * Read entities in the file 
@@ -56,5 +56,5 @@ public interface EntityFileReader {
 	 * @throws IOException 
 	 * @throws BiffException 
 	 */
-	public String getEntitiesInXml(ByteBuffer byteBuffer) throws BiffException, IOException;
+	public String getEntitiesInXml(ByteBuffer byteBuffer) throws Exception;
 }
