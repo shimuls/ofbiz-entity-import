@@ -30,21 +30,35 @@ public class EntityFileReaderFactory {
 	
 	private EntityFileReaderFactory() {};
 	
-	private volatile XlsEntityFileReader xlsReader = new XlsEntityFileReader();
+	private XlsEntityFileReader xlsReader = new XlsEntityFileReader();
+	
+	private XmlEntityFileReader xmlReader = new XmlEntityFileReader();
 	
 	private static final String TYPE_XLS = "XLS";
+	private static final String TYPE_XML = "XML";
 	
 	public static EntityFileReaderFactory getInstance() {
 		return INSTANCE;
 	}
 	
+	/**
+	 * Get reader by type
+	 * @param type - supported type XML/XLS
+	 * @return reader
+	 */
 	public EntityFileReader getReader(String type) {
 		if(UtilValidate.isEmpty(type)) {
 			return null;
 		}
 		
-		if(TYPE_XLS.equals(type.toUpperCase())) {
+		String typeUppered = type.toUpperCase();
+		
+		if(TYPE_XLS.equals(typeUppered)) {
 			return this.xlsReader;
+		}
+		
+		if(TYPE_XML.equals(typeUppered)) {
+			return this.xmlReader;
 		}
 		
 		return null;
