@@ -2,7 +2,7 @@
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
 	<form name="uploadForm" id="uploadForm" target="import" title="" type="single" default-map-name="parameters" >
-        <field name="quoteId" title="Got ${parameters.rowProcessed} entities to write to the datasource." widget-style="buttontext">
+        <field name="quoteId" title="Got ${parameters.rowProcessed} entities to write to the datasource." widget-style="buttontext" use-when="${parameters.rowProcessed != null}">
             <hyperlink also-hidden="false" description="${quoteId}" target="ViewQuote">
                 <parameter param-name="quoteId"/>
             </hyperlink>
