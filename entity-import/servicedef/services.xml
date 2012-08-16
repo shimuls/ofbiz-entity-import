@@ -7,7 +7,7 @@
 
 <service name="entity-import-entityImport" engine="java" auth="true" 
 		location="org.ofbiz.entity.service.EntityImportServices" invoke="entityImport">
-		<description>Import a CSV (name,value) of AddressMatchMap records</description>
+		<description>Import a XML/XLS file containing entities</description>
 		<implements service="uploadFileInterface"/>
 		
 		<attribute name="mostlyInserts" type="String" mode="IN" optional="true"/>
