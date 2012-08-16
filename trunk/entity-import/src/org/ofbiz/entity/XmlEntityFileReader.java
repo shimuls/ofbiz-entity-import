@@ -22,34 +22,31 @@ import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
 
-import jxl.read.biff.BiffException;
-
 /**
- * Read entities from a xls file
+ * Read entities from a XML file
  * @author Liang Zhang
  */
 public class XmlEntityFileReader implements EntityFileReader {
 
 	@Override
-	public String getEntitiesInXml(File file) throws BiffException, IOException {
+	public String getEntitiesInXml(File file) throws Exception {
 		InputStream is = new FileInputStream(file);
 		return this.getEntitiesInXml(is);
 	}
 	
 	@Override
-	public String getEntitiesInXml(ByteBuffer byteBuffer) throws BiffException, IOException {
+	public String getEntitiesInXml(ByteBuffer byteBuffer) throws Exception {
 	    byte[] inputByteArray = byteBuffer.array();
 	    InputStream is = new ByteArrayInputStream(inputByteArray);
 		return this.getEntitiesInXml(is);
 	}
 	
 	@Override
-	public String getEntitiesInXml(InputStream is) throws BiffException, IOException {
+	public String getEntitiesInXml(InputStream is) throws Exception {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 		
 		StringBuffer buffer = new StringBuffer();

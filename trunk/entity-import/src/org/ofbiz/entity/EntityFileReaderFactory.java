@@ -34,8 +34,11 @@ public class EntityFileReaderFactory {
 	
 	private XmlEntityFileReader xmlReader = new XmlEntityFileReader();
 	
+	private CsvEntityFileReader csvReader = new CsvEntityFileReader();
+	
 	private static final String TYPE_XLS = "XLS";
 	private static final String TYPE_XML = "XML";
+	private static final String TYPE_CSV = "CSV";
 	
 	public static EntityFileReaderFactory getInstance() {
 		return INSTANCE;
@@ -43,7 +46,7 @@ public class EntityFileReaderFactory {
 	
 	/**
 	 * Get reader by type
-	 * @param type - supported type XML/XLS
+	 * @param type - supported type XML/XLS/CSV
 	 * @return reader
 	 */
 	public EntityFileReader getReader(String type) {
@@ -59,6 +62,10 @@ public class EntityFileReaderFactory {
 		
 		if(TYPE_XML.equals(typeUppered)) {
 			return this.xmlReader;
+		}
+		
+		if(TYPE_CSV.equals(typeUppered)) {
+			return this.csvReader;
 		}
 		
 		return null;
