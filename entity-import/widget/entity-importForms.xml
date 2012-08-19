@@ -7,7 +7,7 @@
                 <parameter param-name="quoteId"/>
             </hyperlink>
         </field>
-		<field name="uploadedFile" title="Submit file(.xls, .xml)">
+		<field name="uploadedFile" title="Submit file(.xls, .cvs, .xml)">
 			<file></file>
 		</field>
 		<field title="Upload" action="javascript:document.uploadForm.enctype='multipart/form-data';" event="onclick">
